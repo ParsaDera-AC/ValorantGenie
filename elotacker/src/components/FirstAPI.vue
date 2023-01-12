@@ -3,12 +3,17 @@
     <h1>API Response</h1>
     <pre>{{ apiResponse }}</pre>
     <NameForm @login="handleLogin"></NameForm>
+    
   </div>
 </template>
+
+
+
 
 <script>
 import axios from "axios";
 import NameForm from "./NameForm.vue";
+
 
 export default {
   name: "FirstApi",

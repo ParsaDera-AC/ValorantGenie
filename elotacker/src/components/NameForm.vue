@@ -1,30 +1,43 @@
 <template>
-    <form @submit.prevent="login">
-      <label for="username">Username:</label>
-      <input type="text" v-model="username" id="username"><br>
-      <label for="password">Password:</label>
-      <input type="password" v-model="password" id="password"><br>
-      <button type="submit">Log In</button>
-    </form>
-  </template>
-  
-  <script>
+  <v-form @submit.prevent="login">
+    <v-text-field
+      label="Username"
+      v-model="username"
+      id="username"
+      class="my-custom-class"
+    />
+    <v-text-field
+      label="Password"
+      v-model="password"
+      id="password"
+      type="password"
+      class="my-custom-class"
+    />
+    <v-btn type="submit" color="primary">Log In</v-btn>
+  </v-form>
+</template>
 
-  export default {
-    data() {
-      return {
-        username: '',
-        password: ''
-      };
+
+<script>
+export default {
+  data() {
+    return {
+      username: "",
+      password: "",
+    };
+  },
+  methods: {
+    login() {
+      this.$emit("login", { username: this.username, password: this.password });
     },
-    methods: {
-      login() {
-        
-        this.$emit('login', { username: this.username, password: this.password });
+  },
+};
+</script>
 
-        
-      }
-    }
-  };
-  </script>
-  
+<style>
+  .my-custom-class {
+    /* custom styles here */
+    font-size: 20px;
+    margin-top: 20px;
+  }
+</style>

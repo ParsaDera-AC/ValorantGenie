@@ -8,6 +8,7 @@
           </div>
         </div>
       </v-container>
+      <img src="./assets/test5.png" alt="A beautiful landscape">
       <v-spacer></v-spacer>
     </v-app-bar>
     <br />
