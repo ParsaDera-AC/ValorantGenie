@@ -13,7 +13,7 @@
       type="password"
       class="my-custom-class"
     />
-    <v-btn type="submit" color="primary">Log In</v-btn>
+    <v-chip color="secondary" text-color="white" label="Log In" @click="login">Log In</v-chip>
   </v-form>
 </template>
 
