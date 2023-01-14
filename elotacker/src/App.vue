@@ -14,11 +14,7 @@
     <br />
     <v-main style="background-color: #121212; color: #f1f1f1">
       <v-container fluid>
-        <v-row class="d-flex justify-left align-center">
-          <v-col cols="12" md="8">
             <FirstAPI />
-          </v-col>
-        </v-row>
       </v-container>
     </v-main>
   </v-app>
